@@ -1,0 +1,48 @@
+:host::ng-deep popover-content::ng-deep .arrow {
+  left: 45% !important;
+  right: 45% !important;
+}
+
+:host::ng-deep popover-content::ng-deep .popover-header {
+  color: #000 !important;
+  font-size: 13px !important;
+  /* background-color: #00000000; */
+}
+.btn-anchor {
+  font-size: 12px !important;
+}
+.btn-anchor:hover {
+  background-color: #eee;
+}
+:host::ng-deep popover-content::ng-deep .popover-body {
+  padding-right: 0 !important;
+  text-align: left !important;
+  padding-left: 0 !important;
+}
+
+.btn-popover {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.circle {
+  height: 25px;
+  width: 25px;
+  border-radius: 12.5px;
+  margin: 1px;
+
+}
+  
+    
+
+.color-pallette{
+  width: 220px;
+}
+
+.editor-btn{
+  outline: none !important;
+  box-shadow: none !important;
+}
+.editor-btn fa-icon{
+  font-size: 19px !important;
+}
+

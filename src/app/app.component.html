@@ -1,0 +1,212 @@
+<div class="bg-beige mx-auto mt-5">
+  <div class="row mx-0 mb-0 p-2 w-100 border-bottom">
+    <!-- <mat-form-field appearance="fill" class="col-2 m-0">
+      <mat-label>Choose one</mat-label>
+      <mat-select>
+        <mat-option>Clear</mat-option>
+        <mat-option value="valid">Valid option</mat-option>
+        <mat-option value="invalid">Invalid option</mat-option>
+      </mat-select>
+    </mat-form-field> -->
+    <div class="dropdown mx-auto">
+      <button
+        class="btn btn-popover dropdown-toggle editor-btn"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <img src="../assets/font (1).png" alt="" height="30" />
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a
+          class="px-2 py-2 btn btn-anchor d-block"
+          (click)="selectFont2('font1')"
+        >
+          <span class="font1"> The Nautigal</span>
+        </a>
+        <a
+          class="px-2 py-2 btn d-block btn-anchor"
+          (click)="selectFont2('font2')"
+        >
+          <span class="font2"> Times New Roman </span>
+        </a>
+        <a
+          class="px-2 py-2 btn d-block btn-anchor"
+          (click)="selectFont2('font3')"
+        >
+          <span class="font3"> Arial, Helvetica </span>
+        </a>
+        <a
+          class="px-2 py-2 btn d-block btn-anchor"
+          (click)="selectFont2('font4')"
+        >
+          <span class="font4"> Impact, Haettenschweiler </span>
+        </a>
+        <!-- <a class="dropdown-item" >Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a> -->
+      </div>
+    </div>
+
+
+
+    <div class="dropdown mx-auto">
+      <button
+        class="btn btn-popover dropdown-toggle editor-btn"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <img src="../assets/text.png" alt="" height="30" />
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"  style="height: 300px;  overflow-y: scroll;"   >
+        <a 
+        *ngFor="let font of fontSizes"
+          class="px-2 py-2 btn btn-anchor d-block"
+          (click)="selectFontSize(font.fClass)"
+        >
+          <span > {{font.name}}</span>
+        </a>
+      </div>
+    </div>
+    <div class="dropdown mx-auto">
+      <button
+        class="btn btn-popover dropdown-toggle editor-btn"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <img src="../assets/color-picker.png" alt="" height="30" />
+      </button>
+      <div class="dropdown-menu px-0" aria-labelledby="dropdownMenuButton">
+        <div class="row mx-0 color-pallette px-0">
+          <div class="text-center mx-auto" *ngFor="let color of colors">
+            <button
+              class="circle border"
+              [ngClass]="color.bg"
+              (click)="selectColor3(color.text)"
+            ></button>
+
+            <!-- <div     [ngClass]="color"
+            >Tt</div> -->
+          </div>
+        </div>
+        <!-- <a class="dropdown-item" >Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a> -->
+      </div>
+    </div>
+    <!-- <div class="">
+      <div
+        [popoverOnHover]="false"
+        [popover]="myPopoverFlag"
+        class="btn btn-popover py-0"
+      >
+        <fa-icon [icon]="faFont" class="text-dark fa-2x my-auto"></fa-icon>
+      </div>
+
+      <popover-content
+        #myPopoverFlag
+        title="select font"
+        placement="bottom "
+        [animation]="true"
+        [closeOnClickOutside]="true"
+      >
+        <a
+          class="px-2 py-2 btn btn-anchor d-block"
+          (click)="selectFont2('font1')"
+        >
+          <span class="font1"> The Nautigal</span>
+        </a>
+        <a
+          class="px-2 py-2 btn d-block btn-anchor"
+          (click)="selectFont2('font2')"
+        >
+          <span class="font2"> Times New Roman </span>
+        </a>
+        <a
+          class="px-2 py-2 btn d-block btn-anchor"
+          (click)="selectFont2('font3')"
+        >
+          <span class="font3"> Arial, Helvetica </span>
+        </a>
+        <a
+          class="px-2 py-2 btn d-block btn-anchor"
+          (click)="selectFont2('font4')"
+        >
+          <span class="font4"> Impact, Haettenschweiler </span>
+        </a>
+      </popover-content>
+    </div> -->
+
+    <!-- <button style="border: none" (click)="makeBold2()" class="btn col-1 my-auto">
+      <fa-icon [icon]="faBold" class="text-dark my-auto"></fa-icon>
+    </button> -->
+
+    <button (click)="makeItalic2()" class="btn editor-btn m-auto mx-2">
+      <img src="../assets/italic.png" height="24" alt="" />
+    </button>
+
+    <button (click)="makeBold2()" class="btn editor-btn m-auto ">
+      <img src="../assets/bold-text-option.png" alt="" height="24" />
+    </button>
+    <button (click)="makeUnderline()" class="btn editor-btn m-auto ">
+      <img src="../assets/underline.png" alt="" height="25" />
+    </button>
+
+
+    <button (click)="makeUnderline()" class="btn editor-btn m-auto ">
+      <img src="../assets/uppercase-interface-button.png" alt="" height="33" />
+    </button>
+    <button (click)="makeUnderline()" class="btn editor-btn m-auto ">
+      <img src="../assets/lowercase-interface-symbol.png" alt="" height="33" />
+    </button>
+    <div class="dropdown mx-auto">
+      <button
+        class="btn btn-popover dropdown-toggle editor-btn"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <img src="../assets/paint-bucket.png" alt="" height="30" />
+      </button>
+      <div class="dropdown-menu px-0" aria-labelledby="dropdownMenuButton">
+        <div class="row mx-0 color-pallette px-0">
+          <div class="text-center mx-auto" *ngFor="let color of colors">
+            <button
+              class="circle border"
+              [ngClass]="color.bg"
+              (click)="selectBgColor(color.bg)"
+            ></button>
+
+            <!-- <div     [ngClass]="color"
+            >Tt</div> -->
+          </div>
+        </div>
+        <!-- <a class="dropdown-item" >Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a> -->
+      </div>
+
+      <button (click)="removeAllStyle()" class="btn m-auto">
+        <img src="../assets/remove.png" alt="" height="20" class="" />
+      </button>
+    </div>
+    <button (click)="addList()" class="">add li</button> 
+  </div>
+
+  <div
+    id="text"
+    contenteditable="true"
+    class="h-400px p-2 mt-0"
+    type="input"
+  ></div>
+</div>
